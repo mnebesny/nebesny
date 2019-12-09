@@ -65,7 +65,8 @@ body {
 
 .hero-text {
     position: absolute;
-    padding: 15vh;
+    padding: 15vw;
+    width: 70vw;
 }
 
 .profile {
