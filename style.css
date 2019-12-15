@@ -21,10 +21,11 @@ body {
 
 .header-profile {
     display: flex;
-    height: 85vh;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 25vh;
+    padding-bottom: 30vh;
 }
 
 .hero {
