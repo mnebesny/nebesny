@@ -14,7 +14,6 @@ body {
     display: flex;
     flex-direction: column;
     height: 85vh;
-    padding: 32px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -32,6 +31,8 @@ body {
     font-size: 48px;
     margin-left: 10vw;
     margin-top: 15vh;
+    margin-bottom: 5vh;
+    text-transform: lowercase;
 }
 
 .hero-container {
@@ -39,22 +40,28 @@ body {
     display: inline-block;
 }
 
+.hero-container-center {
+    display: inline-block;
+}
+
 .hero-buttons {
     font-size: 18px;
-    margin-left: 0px;
+    margin: 0px;
     padding: 5px;
     text-transform: lowercase;
     display: inline-block;
 }
 
-.hero-container:hover .hero-buttons {
+.hero-container:hover .hero-buttons,
+.hero-container-center:hover .hero-buttons {
     opacity: 0.2;
     filter: blur(1px);
     transition: 0.5s;
     transform-origin: left;
 }
 
-.hero-container .hero-buttons:hover {
+.hero-container .hero-buttons:hover,
+.hero-container-center .hero-buttons:hover {
     opacity: 1;
     filter: blur(0);
     transform: scale(1.5);
@@ -83,13 +90,30 @@ body {
     margin: 1em 0;
 }
 
-.subtitle {
-    color: silver;
-}
+.hero-subtitle-center {
+    color: white;
+    background-color: rgba(33, 68, 99, 0.5);
+    border-radius: 3px;
+    font-size: 27px;
+    margin-left: 0px;
+    padding: 7.5px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-transform: lowercase;
+    display: inline-block;
+};
+
 
 .title {
     font-size: 48px;
     margin: 0.5em 0;
+}
+
+.hero-title-center {
+    font-size: 48px;
+    margin: 0.5em 0;
+    color: white;
+    text-transform: lowercase;
 }
 
 .icon {
