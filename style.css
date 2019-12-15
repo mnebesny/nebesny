@@ -7,6 +7,7 @@ html, body {
 body {
     font-family: Montserrat;
     font-size: 18px;
+    width: 100vw;
 }
 
 .header {
@@ -20,27 +21,52 @@ body {
 }
 
 .hero {
-    display: flex;
-    height: 100vh;
-    color: white;
-    /*background: linear-gradient(130deg, rgba(227, 211, 36, 0.7), rgba(227, 106, 36, 0.9));*/   
-    background: linear-gradient(130deg, #0b8793, #360033);
-    font-size: 48px;
-}
-
-.hero-image {
-    width: 100vw;
-    background-image: url('hero.jpeg');
+    background-image: linear-gradient(130deg, rgba(11, 135, 147, 0.75), rgba(54, 0, 51, 0.75)), url('hero.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.25;
 }
 
-.hero-text {
-    position: absolute;
-    width: 80vw;
-    padding: 10vw;
+.hero-title {
+    color: white;
+    font-size: 48px;
+    margin-left: 10vw;
+    margin-top: 15vh;
+}
+
+.hero-container {
+    margin-left: 10vw;
+    display: inline-block;
+}
+
+.hero-buttons {
+    font-size: 18px;
+    margin-left: 0px;
+    padding: 5px;
+    text-transform: lowercase;
+    display: inline-block;
+}
+
+.hero-container:hover .hero-buttons {
+    opacity: 0.2;
+    filter: blur(1px);
+    transition: 0.5s;
+    transform-origin: left;
+}
+
+.hero-container .hero-buttons:hover {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.5);
+    transition: 0.5s;
+    transform-origin: center;
+    background-color: rgba(33, 68, 99, 0.5);
+    border-radius: 3px;
+}
+
+.hero-links {
+    color: white;
+    display: inline-block;
 }
 
 .profile {
