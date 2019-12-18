@@ -21,6 +21,8 @@ body {
 
 .footer {
     padding: 25px;
+    padding-left: 0;
+    padding-right: 0;
     position: fixed;
     bottom: 0;
     width: 100vw
