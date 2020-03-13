@@ -8,6 +8,7 @@ body {
     font-family: Montserrat;
     font-size: 18px;
     width: 100vw;
+    color: white;
 }
 
 .header {
@@ -28,11 +29,15 @@ body {
     width: 100vw
 }
 
+.icon {
+    padding: 0;
+    margin: 0;
+}
+
 .header-profile {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     padding-top: 25vh;
 }
 
@@ -62,7 +67,8 @@ body {
     display: inline-block;
 }
 
-.hero-buttons {
+.hero-buttons,
+.hero-icons {
     font-size: 18px;
     margin: 0px;
     padding: 5px;
@@ -72,6 +78,7 @@ body {
 
 .hero-container:hover .hero-buttons,
 .hero-container-center:hover .hero-buttons,
+.hero-container-center:hover .hero-icons,
 .hero-container-name:hover .hero-buttons {
     opacity: 0.2;
     filter: blur(1px);
@@ -81,6 +88,7 @@ body {
 
 .hero-container .hero-buttons:hover,
 .hero-container-center .hero-buttons:hover,
+.hero-container-center .hero-icons:hover,
 .hero-container-name .hero-buttons:hover {
     opacity: 1;
     filter: blur(0);
@@ -113,8 +121,9 @@ body {
     display: inline-block;
     border-radius: 5px;
     height: 220px;
-    background-color: white;
+    /*background-color: white;*/
     margin: 5px;
+    margin-top: 0px;
     padding-left: 55px;
     padding-right: 55px;
 }
@@ -148,20 +157,27 @@ body {
     text-transform: lowercase;
 }
 
+.hero-buttons,
+.hero-icons {
+    padding-left: 0;
+}
+
 .hero-name-center {
     font-size: 34px;
     margin: 0.5em 0;
-    color: black;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    color: white;
+    margin-top: 17px;
+    margin-bottom: 13px;
+}
+
+#contact-links,
+#contact-links-buttons {
+    display: block;
+    width: fit-content;
 }
 
 .icon {
-    width: 27px;
-    height: 27px;
-    margin-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    height: 18px;
 }
 
 a {
@@ -179,6 +195,7 @@ a {
         display: block;
         padding-top: 10vw;
         padding-bottom: 5px;
+        text-align: center;
     }
 
     .profile-image {
@@ -203,9 +220,22 @@ a {
         font-size: 25px;
     }
 
-    .icon {
-        width: 7vw;
-        height: 7vw;
-        padding: 1vw;   
+    .hero-container-center,
+    .hero-buttons {
+        margin: auto;
+    }
+
+    .hero-subtitle-center {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 80vw;
+        text-align: center;
+    }
+
+    .profile-holder {
+        padding-left: 0;
+        padding-right: 0;
+        width: 80vw
     }
 }
