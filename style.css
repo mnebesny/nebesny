@@ -68,6 +68,7 @@ body {
 }
 
 .hero-buttons,
+.hero-buttons-profile
 .hero-icons {
     font-size: 18px;
     margin: 0px;
@@ -76,9 +77,21 @@ body {
     display: inline-block;
 }
 
+.hero-icons {
+    display: inline-block;
+}
+
+.hero-buttons-profile,
+.hero-icons {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .hero-container:hover .hero-buttons,
-.hero-container-center:hover .hero-buttons,
-.hero-container-center:hover .hero-icons,
+.hero-container-center:hover .hero-buttons-profile,
+.hero-container-center:hover .icon,
 .hero-container-name:hover .hero-buttons {
     opacity: 0.2;
     filter: blur(1px);
@@ -87,19 +100,24 @@ body {
 }
 
 .hero-container .hero-buttons:hover,
-.hero-container-center .hero-buttons:hover,
-.hero-container-center .hero-icons:hover,
+.hero-container-center .hero-buttons-profile:hover,
+.hero-container-center .icon:hover,
 .hero-container-name .hero-buttons:hover {
     opacity: 1;
     filter: blur(0);
     transform: scale(1.5);
     transition: 0.5s;
     transform-origin: center;
+}
+
+.hero-container .hero-buttons:hover,
+.hero-container-center .hero-buttons-profile:hover,
+.hero-container-name .hero-buttons:hover {
     border-radius: 3px;
 }
 
 .hero-container .hero-buttons:hover,
-.hero-container-center .hero-buttons:hover {
+.hero-container-center .hero-buttons-profile:hover {
     background-color: rgba(33, 68, 99, 0.5);
 }
 
@@ -157,9 +175,13 @@ body {
     text-transform: lowercase;
 }
 
-.hero-buttons,
+.hero-buttons-profile,
 .hero-icons {
     padding-left: 0;
+}
+
+.hero-buttons-profile:hover {
+    padding-left: 5px;
 }
 
 .hero-name-center {
@@ -196,6 +218,10 @@ a {
         padding-top: 10vw;
         padding-bottom: 5px;
         text-align: center;
+    }
+
+    .hero-buttons-profile {
+        margin: auto;
     }
 
     .profile-image {
