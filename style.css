@@ -91,6 +91,7 @@ body {
 
 .hero-container:hover .hero-buttons,
 .hero-container-center:hover .hero-buttons-profile,
+.hero-container-center:hover .hero-buttons,
 .hero-container-center:hover .icon,
 .hero-container-name:hover .hero-buttons {
     opacity: 0.2;
@@ -101,6 +102,7 @@ body {
 
 .hero-container .hero-buttons:hover,
 .hero-container-center .hero-buttons-profile:hover,
+.hero-container-center .hero-buttons:hover,
 .hero-container-center .icon:hover,
 .hero-container-name .hero-buttons:hover {
     opacity: 1;
@@ -112,12 +114,9 @@ body {
 
 .hero-container .hero-buttons:hover,
 .hero-container-center .hero-buttons-profile:hover,
+.hero-container-center .hero-buttons:hover,
 .hero-container-name .hero-buttons:hover {
     border-radius: 3px;
-}
-
-.hero-container .hero-buttons:hover,
-.hero-container-center .hero-buttons-profile:hover {
     background-color: rgba(33, 68, 99, 0.5);
 }
 
