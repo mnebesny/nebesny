@@ -1,3 +1,14 @@
+/*
+    TODO
+    -   add signature overlay to profle image
+    -   add dropdown menu to profile page with resume, etc.
+    -   refactor css
+    -   make hover effect align with text lignment/change link style for profile links
+    -   generalize profile page
+*/
+
+
+
 html, body {
     margin: 0;
     padding: 0;
