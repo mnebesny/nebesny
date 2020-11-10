@@ -15,11 +15,80 @@ html, body {
     min-height: 100%;
 }
 
-body {
+body { /*NEW*/
     font-family: Montserrat;
     font-size: 18px;
     width: 100vw;
     color: white;
+    background-image: linear-gradient(130deg, rgba(11, 135, 147, 0.75), rgba(54, 0, 51, 0.75))/*, url('bg.jpeg')*/ ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h1-center { /*NEW*/
+    color: white;
+    font-size: 48px;
+    margin: 0.5em 0;
+    text-transform: lowercase;
+}
+
+.h1-left,
+h1 { /*NEW*/
+    color: white;
+    font-size: 48px;
+    margin-left: 10vw;
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+    text-transform: lowercase;
+}
+
+.sub-center {
+    color: white;
+    background-color: rgba(33, 68, 99, 0.5);
+    border-radius: 3px;
+    font-size: 27px;
+    margin-left: 0px;
+    padding: 7.5px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: inline-block;
+}
+
+.h2-center,
+h2 { /*NEW*/
+    font-size: 34px;
+    margin: 0.5em 0;
+    color: white;
+    margin-top: 17px;
+    margin-bottom: 13px;
+}
+
+a { /*NEW*/
+    /*color: black;*/
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+ul li::before {
+    content: '—';
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    width: 2em;
+    margin-left: -1em;
+}
+
+.footer { /*NEW*/
+    padding: 25px;
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100vw
 }
 
 .header {
@@ -29,15 +98,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.footer {
-    padding: 25px;
-    padding-left: 0;
-    padding-right: 0;
-    position: fixed;
-    bottom: 0;
-    width: 100vw
+    font-size: 28px;
+    margin: 1em 0;
 }
 
 .icon {
@@ -52,70 +114,65 @@ body {
     padding-top: 25vh;
 }
 
-.hero {
-    background-image: linear-gradient(130deg, rgba(11, 135, 147, 0.75), rgba(54, 0, 51, 0.75)), url('hero.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.hero-title {
-    color: white;
-    font-size: 48px;
-    margin-left: 10vw;
-    margin-top: 15vh;
-    margin-bottom: 2vh;
-    text-transform: lowercase;
-}
-
-.hero-container {
+.container,
+.container-list {
     margin-left: 10vw;
     display: inline-block;
 }
 
-.hero-container-center,
-.hero-container-name {
+.container-center,
+.container-name {
     display: inline-block;
 }
 
-.hero-buttons,
-.hero-buttons-profile
-.hero-icons {
+.buttons,
+.buttons-profile,
+.buttons-links,
+.icons {
     font-size: 18px;
     margin: 0px;
     padding: 5px;
     text-transform: lowercase;
+}
+
+.buttons-links {
+    padding-left: 0;
+}
+
+.buttons,
+.buttons-profile,
+.icons {
     display: inline-block;
 }
 
-.hero-icons {
+.icons {
     display: inline-block;
 }
 
-.hero-buttons-profile,
-.hero-icons {
+.buttons-profile,
+.icons {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.hero-container:hover .hero-buttons,
-.hero-container-center:hover .hero-buttons-profile,
-.hero-container-center:hover .hero-buttons,
-.hero-container-center:hover .icon,
-.hero-container-name:hover .hero-buttons {
+.container:hover .buttons/*,
+.container-center:hover .buttons-profile*/,
+.container-center:hover .buttons/*,
+.container-center:hover .icon*/,
+.container-name:hover .buttons {
     opacity: 0.2;
     filter: blur(1px);
     transition: 0.5s;
     transform-origin: left;
 }
 
-.hero-container .hero-buttons:hover,
-.hero-container-center .hero-buttons-profile:hover,
-.hero-container-center .hero-buttons:hover,
-.hero-container-center .icon:hover,
-.hero-container-name .hero-buttons:hover {
+.container .buttons:hover/*,
+.container-center .buttons-profile:hover*/,
+.container-center .buttons:hover/*,
+.container-center .icon:hover*/,
+.container-name .buttons:hover {
     opacity: 1;
     filter: blur(0);
     transform: scale(1.5);
@@ -123,17 +180,27 @@ body {
     transform-origin: center;
 }
 
-.hero-container .hero-buttons:hover,
-.hero-container-center .hero-buttons-profile:hover,
-.hero-container-center .hero-buttons:hover,
-.hero-container-name .hero-buttons:hover {
+.container .buttons:hover/*,
+.container-center .buttons-profile:hover*/,
+.container-center .buttons:hover,
+.container-name .buttons:hover {
     border-radius: 3px;
     background-color: rgba(33, 68, 99, 0.5);
 }
 
-.hero-links {
+.links {
     color: white;
     display: inline-block;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+.underline-lighter {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 
 .profile-image {
@@ -156,51 +223,14 @@ body {
     padding-right: 55px;
 }
 
-.header, .name {
-    font-size: 28px;
-    margin: 1em 0;
-}
-
-.hero-subtitle-center {
-    color: white;
-    background-color: rgba(33, 68, 99, 0.5);
-    border-radius: 3px;
-    font-size: 27px;
-    margin-left: 0px;
-    padding: 7.5px;
-    padding-left: 100px;
-    padding-right: 100px;
-    display: inline-block;
-};
-
-.title {
-    font-size: 48px;
-    margin: 0.5em 0;
-}
-
-.hero-title-center {
-    font-size: 48px;
-    margin: 0.5em 0;
-    color: white;
-    text-transform: lowercase;
-}
-
-.hero-buttons-profile,
-.hero-icons {
+.buttons-profile,
+.icons {
     padding-left: 0;
 }
 
-.hero-buttons-profile:hover {
+/*.buttons-profile:hover {
     padding-left: 5px;
-}
-
-.hero-name-center {
-    font-size: 34px;
-    margin: 0.5em 0;
-    color: white;
-    margin-top: 17px;
-    margin-bottom: 13px;
-}
+}*/
 
 #contact-links,
 #contact-links-buttons {
@@ -212,15 +242,23 @@ body {
     height: 18px;
 }
 
-a {
-    color: black;
-    text-decoration: none;
-}
-
 @media only screen and (max-device-width: 480px) {
-    .body {
+    body { /*NEW*/
         width: auto;
         height: auto;
+    }
+
+    .sub-center { /*NEW*/
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 80vw;
+        text-align: center;
+    }
+
+    .h2-center { /*NEW*/
+        margin-top: 0;
+        font-size: 25px;
     }
     
     .header-profile {
@@ -230,7 +268,7 @@ a {
         text-align: center;
     }
 
-    .hero-buttons-profile {
+    .buttons-profile {
         margin: auto;
     }
 
@@ -251,22 +289,9 @@ a {
         height: auto;
     }
 
-    .hero-name-center {
-        margin-top: 0;
-        font-size: 25px;
-    }
-
-    .hero-container-center,
-    .hero-buttons {
+    .container-center,
+    .buttons {
         margin: auto;
-    }
-
-    .hero-subtitle-center {
-        margin-bottom: 15px;
-        padding-left: 0px;
-        padding-right: 0px;
-        width: 80vw;
-        text-align: center;
     }
 
     .profile-holder {
