@@ -188,6 +188,14 @@ ul li::before {
     background-color: rgba(33, 68, 99, 0.5);
 }
 
+iframe {
+    margin: 0.5em 0;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    width: 80vw;
+    height: 60vh;
+}
+
 .links {
     color: white;
     display: inline-block;
