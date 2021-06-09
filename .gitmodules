@@ -1,3 +1,6 @@
 [submodule "files/crosswords"]
 	path = files/crosswords
 	url = https://github.com/mnebesny/crosswords
+[submodule "crosswords"]
+	path = crosswords
+	url = https://github.com/mnebesny/crosswords.git
