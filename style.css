@@ -1,7 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;900&display=swap');
+/*
+    TODO
+    -   add signature overlay to profle image
+    -   add dropdown menu to profile page with resume, etc.
+    -   refactor css
+    -   make hover effect align with text lignment/change link style for profile links
+    -   generalize profile page
+*/
 
-body {
-    height: 100vh;
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body { /*NEW*/
+    font-family: Montserrat;
+    font-size: 18px;
+    width: 100vw;
     color: white;
     background-image: linear-gradient(130deg, rgba(11, 135, 147, 0.75), rgba(54, 0, 51, 0.75))/*, url('bg.jpeg')*/ ;
     background-position: center;
@@ -9,30 +26,285 @@ body {
     background-size: cover;
 }
 
-h1 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 900;
+.h1-center { /*NEW*/
+    color: white;
     font-size: 48px;
+    margin: 0.5em 0;
+    text-transform: lowercase;
 }
 
-.link {
-    border: 2px solid white;
-    padding: 5px;
-    margin: 5px;
-    width: 30%;
-    text-align: center;
-    /*text-transform: lowercase;*/
-}
-
-div,
-p {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 300;
+.h1-left,
+h1 { /*NEW*/
     color: white;
+    font-size: 48px;
+    margin-left: 10vw;
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+    text-transform: lowercase;
 }
 
-a {
+.sub-center {
     color: white;
+    background-color: rgba(33, 68, 99, 0.5);
+    border-radius: 3px;
+    font-size: 27px;
+    margin-left: 0px;
+    padding: 7.5px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: inline-block;
+}
+
+.h2-center,
+h2 { /*NEW*/
+    font-size: 34px;
+    margin: 0.5em 0;
+    color: white;
+    margin-top: 17px;
+    margin-bottom: 13px;
+}
+
+a { /*NEW*/
+    /*color: black;*/
     text-decoration: none;
 }
 
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+ul li::before {
+    content: '—';
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    width: 2em;
+    margin-left: -1em;
+}
+
+.footer { /*NEW*/
+    padding: 25px;
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100vw
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    margin: 1em 0;
+}
+
+.icon {
+    padding: 0;
+    margin: 0;
+}
+
+.header-profile {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-top: 25vh;
+}
+
+.container,
+.container-list {
+    margin-left: 10vw;
+    display: inline-block;
+}
+
+.container-center,
+.container-name {
+    display: inline-block;
+}
+
+.buttons,
+.buttons-profile,
+.buttons-links,
+.icons {
+    font-size: 18px;
+    margin: 0px;
+    padding: 5px;
+    text-transform: lowercase;
+}
+
+.buttons-links {
+    padding-left: 0;
+}
+
+.buttons,
+.buttons-profile,
+.icons {
+    display: inline-block;
+}
+
+.icons {
+    display: inline-block;
+}
+
+.buttons-profile,
+.icons {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container:hover .buttons/*,
+.container-center:hover .buttons-profile*/,
+.container-center:hover .buttons/*,
+.container-center:hover .icon*/,
+.container-name:hover .buttons {
+    opacity: 0.2;
+    filter: blur(1px);
+    transition: 0.5s;
+    transform-origin: left;
+}
+
+.container .buttons:hover/*,
+.container-center .buttons-profile:hover*/,
+.container-center .buttons:hover/*,
+.container-center .icon:hover*/,
+.container-name .buttons:hover {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.5);
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.container .buttons:hover/*,
+.container-center .buttons-profile:hover*/,
+.container-center .buttons:hover,
+.container-name .buttons:hover {
+    border-radius: 3px;
+    background-color: rgba(33, 68, 99, 0.5);
+}
+
+iframe {
+    margin: 0.5em 0;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    width: 80vw;
+    height: 60vh;
+}
+
+.links {
+    color: white;
+    display: inline-block;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+.underline-lighter {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+.profile-image {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    height: 220px;
+    width: 220px;
+    filter: grayscale(100%);
+}
+
+.profile-holder {
+    display: inline-block;
+    border-radius: 5px;
+    height: 220px;
+    /*background-color: white;*/
+    margin: 5px;
+    margin-top: 0px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.buttons-profile,
+.icons {
+    padding-left: 0;
+}
+
+/*.buttons-profile:hover {
+    padding-left: 5px;
+}*/
+
+#contact-links,
+#contact-links-buttons {
+    display: block;
+    width: fit-content;
+}
+
+.icon {
+    height: 18px;
+}
+
+@media only screen and (max-device-width: 480px) {
+    body { /*NEW*/
+        width: auto;
+        height: auto;
+    }
+
+    .sub-center { /*NEW*/
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 80vw;
+        text-align: center;
+    }
+
+    .h2-center { /*NEW*/
+        margin-top: 0;
+        font-size: 25px;
+    }
+    
+    .header-profile {
+        display: block;
+        padding-top: 10vw;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .buttons-profile {
+        margin: auto;
+    }
+
+    .profile-image {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .profile-holder {
+        width: 70vw;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block;
+        height: auto;
+    }
+
+    .container-center,
+    .buttons {
+        margin: auto;
+    }
+
+    .profile-holder {
+        padding-left: 0;
+        padding-right: 0;
+        width: 80vw
+    }
+}
